@@ -1,0 +1,1 @@
+var Kambeba_Amatura = {"type":"FeatureCollection","features":[{"type":"Feature","id":7,"geometry":{"type":"MultiPoint","coordinates":[[-68.093416666699994,-3.3558444443295943]]},"properties":{"FID":7,"NomeAldeia":"Vila Benevide","Etnia":"Kambeba","Finalidade":"Área Proposta para Identificação e Demarcação","No_Familia":0,"Municipio":"Amaturá"}}]}

@@ -1,0 +1,1 @@
+var Kokama_Amatura = {"type":"FeatureCollection","features":[{"type":"Feature","id":5,"geometry":{"type":"MultiPoint","coordinates":[[-67.965325000000007,-3.3523305554497003]]},"properties":{"FID":5,"NomeAldeia":"São Pedro","Etnia":"Kokama","Finalidade":"Área Proposta para Identificação e Demarcação","No_Familia":0,"Municipio":"Amaturá"}}]}

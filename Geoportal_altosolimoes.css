@@ -1,0 +1,838 @@
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1.4 "Segoe UI", system-ui, Arial, sans-serif;
+  overflow: hidden;
+  background: #fff;
+}
+
+
+/* =========================================
+   MAPA
+========================================= */
+
+#mapa_geportal {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 10;
+  width: min(350px, 92vw);
+  height: 100vh;
+  padding: 22px;
+  background: #e5e7d7;
+  color: #1d1c1c;
+  box-shadow: 4px 0 14px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #56582d;
+  text-align: center;
+}
+
+
+/* =========================================
+   TÍTULOS E SUBTÍTULOS
+========================================= */
+
+.sidebar-legend {
+  width: 100%;
+}
+
+.sidebar-legend h3 {
+  margin: 14px 0 5px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #56582d;
+  letter-spacing: 0.2px;
+}
+
+.sidebar-legend h3:first-child {
+  margin-top: 0;
+}
+
+.sidebar-legend h3.titulo-restricao {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.subtitulo-rt1 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #56582d;
+}
+
+
+/* =========================================
+   ITENS DA LEGENDA
+========================================= */
+
+.layer-item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.layer-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+.layer-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.layer-text {
+  line-height: 1.25;
+}
+
+
+/* =========================================
+   SÍMBOLOS DA LEGENDA
+========================================= */
+
+.legend-box {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Municípios Alto Solimões */
+
+.legend-box.Municipios_Altosolimoes2026 {
+  background: rgba(189, 189, 189, 0.25);
+  border: 2px solid #8B904B;
+}
+
+.legend-box.Municipios_Altosolimoes2026 {
+  background: rgba(189, 189, 189, 0.25);
+  border: 2px solid #8B904B;
+}
+
+
+/* Municípios Medio Solimões */
+
+.legend-box.Medio_Solimoes {
+  background: rgba(189, 189, 189, 0.25);
+  border: 2px solid #8B904B;
+}
+
+.legend-box.Medio_Solimoes {
+  background: rgba(189, 189, 189, 0.25);
+  border: 2px solid #8B904B;
+}
+
+/* Municípios Japurá */
+
+.legend-box.Municipios_Japura2026 {
+  background: rgba(189, 189, 189, 0.25);
+  border: 2px solid #8B904B;
+}
+
+.legend-box.Municipios_Japura2026 {
+  background: rgba(189, 189, 189, 0.25);
+  border: 2px solid #8B904B;
+}
+
+/* Terras Indígenas Kokama - RT1 */
+
+.legend-box.TerrasIndigenasKokamaDemarcacao {
+  background: #B8860B;
+  opacity: 0.8;
+  border: 2px solid #5A3A00;
+}
+
+/* Terras propostas - RT2 */
+
+.legend-box.Amatura_Tonantins_Areas_Propostas {
+  background: #348C78;
+  border: 2px solid #183f36;
+}
+
+/* PIACI */
+
+.legend-box.Piaci_confirmado {
+  background: #66CDAB;
+  border: 2px solid #66CDAB;
+}
+
+.legend-box.Piaci_noconfirmado {
+  background: #969696;
+  border: 2px solid #969696;
+}
+
+/* Terras Indígenas Tikuna */
+
+.legend-box.TerrasIndigenasTikuna {
+  background: #C45D4C;
+  opacity: 0.8;
+  border: 2px solid #5A3A00;
+}
+
+
+/* Terras Indígenas Japura */
+
+.legend-box.TI_Japura {
+  background: #C45D4C;
+  opacity: 0.8;
+  border: 2px solid #5A3A00;
+}
+
+
+/* Garimpo */
+
+.legend-box.Garimpo_AltoSolimoes {
+  background: #D62828;
+  opacity: 0.8;
+  border: 2px solid #D62828;
+}
+
+/* Resguardos Colombia */
+
+.legend-box.Resguardo-Colombia {
+  background: #E6D5C3;
+  opacity: 0.8;
+  border: 2px solid #A67C52;
+}
+
+/* TI Amazonas */
+
+.legend-box.TI_Amazonas {
+  background: #E6D5C3;
+  opacity: 0.8;
+  border: 2px solid #A67C52;
+}
+
+.legend-box.Incra {
+  background-color: #7446B8;
+  border: 1.5px solid #7446B8;
+  opacity: 0.85;
+}
+
+/* Solicitudes de Resguardo Colombia */
+
+.legend-box.Solicitudes_Resguardo_Colombia {
+  background: #D98A32;
+  opacity: 0.8;
+  border: 2px solid #9A5718;
+}
+
+/* Parques Colombia */
+
+.legend-box.Parques_Colombia {
+  background: #78B96A;
+  opacity: 0.8;
+  border: 2px solid #78B96A;
+}
+
+/* Unidades de Conservacao */
+
+.legend-box.Unidades_Conservacao_Amazonas {
+  background: #78B96A;
+  opacity: 0.8;
+  border: 2px solid #78B96A;
+}
+/* Comunidades Kokama - RT1 */
+
+.legend-box.Aldeias_Kokama_rt1 {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/comunidades_kokama.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+
+/* Comunidades Witoto */
+
+.legend-box.Witoto_Amatura {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/witoto.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+
+/* Comunidades Tikuna Amatura */
+
+.legend-box.Tikuna_Amatura {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/comunidades_tikuna.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+/* Comunidades Kambeba Amatura */
+
+.legend-box.Kambeba_Amatura {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/Kambeba.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+
+/* Comunidades Kokama Amatura */
+
+.legend-box.Kokama_Amatura {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/comunidades_kokama.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+/* Comunidades Kaixana Amatura */
+
+.legend-box.Kaixana_Tonantins {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/Kaixana.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+
+/* Comunidades Kaixana Amatura */
+
+.legend-box.Kaixanha_Kokama {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/Kokama_Kaixana.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+/* Cidades Alto Solimões */
+
+.legend-box.Aldeias_Tikuna {
+  width: 18px;
+  height: 18px;
+  background: url("imagens/comunidades_tikuna.png")
+              center / contain no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+
+/* =========================================
+   LOGOS
+========================================= */
+
+.logos {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.logos img {
+  max-width: 180px;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+/* ==========================================
+   ESTILO GERAL DAS TABELAS - GEOPORTAL
+========================================== */
+
+.tabela-terras-kokama,
+.tabela-diagnostico {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #26352d;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* CÉLULAS */
+
+.tabela-terras-kokama th,
+.tabela-terras-kokama td,
+.tabela-diagnostico th,
+.tabela-diagnostico td {
+  font-family: inherit;
+  font-size: 10px;
+  padding: 6px 3px;
+  border: none;
+  border-bottom: 1px solid #d2d6cd;
+  text-align: center;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+/* CABEÇALHOS */
+
+.tabela-terras-kokama th,
+.tabela-diagnostico th {
+  background: #e0e5d9;
+  color: #244b3c;
+  font-weight: 700;
+}
+
+/* LINHAS ALTERNADAS */
+
+.tabela-terras-kokama tbody tr:nth-child(even),
+.tabela-diagnostico tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.tabela-terras-kokama tbody tr:hover,
+.tabela-diagnostico tbody tr:hover {
+  background: #dce6d8;
+  transition: background 0.2s ease;
+}
+
+/* ==========================================
+   TABELA TERRAS INDÍGENAS KOKAMA
+========================================== */
+
+.tabela-terras-kokama {
+  margin-top: 10px;
+}
+
+/* PRIMEIRA COLUNA - TERRITÓRIOS */
+
+.tabela-terras-kokama th:first-child,
+.tabela-terras-kokama td:first-child {
+  width: 43%;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* DEMAIS COLUNAS */
+
+.tabela-terras-kokama th:not(:first-child),
+.tabela-terras-kokama td:not(:first-child) {
+  text-align: right;
+}
+
+/* LINHA DO TOTAL */
+
+.tabela-terras-kokama .tabela-total {
+  background: rgba(184, 134, 11, 0.12);
+}
+
+.tabela-terras-kokama .tabela-total td {
+  font-weight: 700;
+  color: #244b3c;
+}
+
+.tabela-terras-kokama .tabela-total:hover {
+  background: rgba(184, 134, 11, 0.20);
+}
+
+/* ==========================================
+   DIAGNÓSTICO TERRITORIAL KOKAMA
+========================================== */
+
+.diagnostico-kokama {
+  width: 100%;
+  margin: 16px 0;
+  font-family: inherit;
+  color: #26352d;
+}
+
+/* TÍTULO */
+
+.diagnostico-kokama h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #244b3c;
+}
+
+/* GRUPOS */
+
+.diagnostico-grupo {
+  background: #244b3c;
+  color: #ffffff;
+  padding: 6px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+}
+
+.diagnostico-grupo.terra-firme {
+  margin-top: 14px;
+}
+
+/* PRIMEIRA COLUNA - ALDEIAS */
+
+.tabela-diagnostico th:first-child,
+.tabela-diagnostico td:first-child {
+  width: 36%;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* COLUNA ÁGUA */
+
+.tabela-diagnostico th:nth-child(2) {
+  width: 22%;
+}
+
+/* COLUNA SANEAMENTO */
+
+.tabela-diagnostico th:nth-child(3) {
+  width: 20%;
+}
+
+/* COLUNA SAÚDE */
+
+.tabela-diagnostico th:nth-child(4) {
+  width: 22%;
+}
+
+/* AUSÊNCIA DE SERVIÇOS */
+
+.tabela-diagnostico .sem-servico {
+  background: #f0c4b7;
+  color: #713b2e;
+  font-weight: 600;
+}
+
+/* CABEÇALHO - TERRAS INDÍGENAS KOKAMA */
+
+.tabela-terras-kokama thead th {
+  background: #244b3c;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 7px 4px;
+  border-bottom: 1px solid #1b382d;
+}
+
+/* CANTOS SUPERIORES ARREDONDADOS */
+
+.tabela-terras-kokama thead th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.tabela-terras-kokama thead th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.tabela-terras-kokama th,
+.tabela-terras-kokama td,
+.tabela-diagnostico th,
+.tabela-diagnostico td {
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.3;
+  padding: 6px 3px;
+}
+
+/* AJUSTE DAS COLUNAS - TERRAS KOKAMA */
+
+.tabela-terras-kokama {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Territórios em Demarcação */
+.tabela-terras-kokama th:nth-child(1) {
+  width: 39%;
+}
+
+/* Área (ha) */
+.tabela-terras-kokama th:nth-child(2) {
+  width: 23%;
+}
+
+/* Aldeias */
+.tabela-terras-kokama th:nth-child(3) {
+  width: 15%;
+}
+
+/* População */
+.tabela-terras-kokama th:nth-child(4) {
+  width: 23%;
+}
+
+/* Evitar quebra de palavras nos cabeçalhos */
+.tabela-terras-kokama thead th {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* Manter População em uma única linha */
+.tabela-terras-kokama thead th:last-child {
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* =====================================
+   TABELAS DESPLEGÁVEIS - GEOPORTAL
+===================================== */
+
+.tabela-desplegable {
+  width: 100%;
+  margin: 12px 0;
+  border: 1px solid #cbd5c8;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.35);
+  overflow: hidden;
+}
+
+/* TÍTULO CLICÁVEL */
+
+.tabela-desplegable summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding: 10px 12px;
+  cursor: pointer;
+  list-style: none;
+
+  background: #e0e5d9;
+  color: #244b3c;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: background 0.2s ease;
+}
+
+/* RETIRAR SETA PADRÃO */
+
+.tabela-desplegable summary::-webkit-details-marker {
+  display: none;
+}
+
+/* SETA PERSONALIZADA */
+
+.tabela-desplegable summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+
+  border-right: 2px solid #244b3c;
+  border-bottom: 2px solid #244b3c;
+
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+/* SETA QUANDO ABERTA */
+
+.tabela-desplegable[open] summary::after {
+  transform: rotate(225deg);
+}
+
+/* EFEITO HOVER */
+
+.tabela-desplegable summary:hover {
+  background: #d0dccb;
+}
+
+/* TÍTULO QUANDO ABERTO */
+
+.tabela-desplegable[open] summary {
+  background: #244b3c;
+  color: #ffffff;
+}
+
+.tabela-desplegable[open] summary::after {
+  border-color: #ffffff;
+}
+
+/* CONTEÚDO DA TABELA */
+
+.conteudo-tabela {
+  padding: 8px 5px 10px;
+}
+
+/* REMOVER MARGEM SUPERIOR EXCESSIVA */
+
+.conteudo-tabela .tabela-terras-kokama {
+  margin-top: 0;
+}
+
+/* MANTER TABELAS DENTRO DO SIDEBAR */
+
+.conteudo-tabela table {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =====================================
+   TAMANHO DAS LETRAS DAS TABELAS
+===================================== */
+
+.tabela-terras-kokama,
+.tabela-diagnostico {
+  font-size: 11.5px;
+}
+
+/* Células e cabeçalhos */
+.tabela-terras-kokama th,
+.tabela-terras-kokama td,
+.tabela-diagnostico th,
+.tabela-diagnostico td {
+  font-size: 11.5px;
+  line-height: 1.35;
+  padding: 7px 4px;
+}
+
+/* Títulos das tabelas desplegáveis */
+.tabela-desplegable summary {
+  font-size: 12.5px;
+}
+
+/* Títulos VÁRZEA e TERRA FIRME */
+.diagnostico-grupo {
+  font-size: 11.5px;
+}
+
+/* EVITAR QUE OS NÚMEROS SE DIVIDAM */
+
+.tabela-terras-kokama th:nth-child(2),
+.tabela-terras-kokama td:nth-child(2) {
+  width: 27%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* AJUSTAR LARGURA DAS COLUNAS */
+
+.tabela-terras-kokama th:nth-child(1) {
+  width: 35%;
+}
+
+.tabela-terras-kokama th:nth-child(3) {
+  width: 15%;
+}
+
+.tabela-terras-kokama th:nth-child(4) {
+  width: 23%;
+}
+
+/* EVITAR QUE OS NÚMEROS QUEBREM */
+
+.tabela-terras-kokama td:not(:first-child) {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* ================================
+   TABELA COMPOSIÇÃO ÉTNICA
+================================ */
+
+.tabela-etnias {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: inherit;
+  font-size: 11.5px;
+  color: #26352d;
+  background: rgba(255,255,255,0.55);
+}
+
+.tabela-etnias th,
+.tabela-etnias td {
+  padding: 7px 4px;
+  font-size: 11.5px;
+  line-height: 1.35;
+  border-bottom: 1px solid #d2d6cd;
+}
+
+.tabela-etnias th {
+  font-weight: 700;
+  color: #244b3c;
+  background: #e0e5d9;
+}
+
+.tabela-etnias th:first-child,
+.tabela-etnias td:first-child {
+  width: 65%;
+  text-align: left;
+}
+
+.tabela-etnias th:last-child,
+.tabela-etnias td:last-child {
+  width: 35%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tabela-etnias tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.35);
+}
+
+.tabela-etnias tbody tr:hover {
+  background: #dce6d8;
+  transition: background 0.2s ease;
+}
+
+.tabela-etnias .tabela-total {
+  background: rgba(184,134,11,0.12);
+}
+
+.tabela-etnias .tabela-total td {
+  font-weight: 700;
+  color: #244b3c;
+}
+
+/* Ocultar preguntas sugeridas del asistente */
+.sidebar button:not([type="submit"]) {
+  display: none !important;
+}

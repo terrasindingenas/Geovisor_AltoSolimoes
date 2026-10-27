@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="imagens/logo.png" />
+  <title>Alto Solimões</title>
+
+  <link rel="stylesheet" href="Geoportal_altosolimoes.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin></script>
+
+  <script src="./Dados/Estado_Amazonas.js"></script>
+  <script src="./Dados/Municipios_Altosolimoes2026.js"></script>
+  <script src="./Dados/Municipios_Japura2026.js"></script>
+  <script src="./Dados/TerrasIndigenasKokamaDemarcacao.js"></script>
+  <script src="./Dados/TerrasIndigenasTituka.js"></script>
+  <script src="./Dados/Amatura_Tonantins_Areas_Propostas.js"></script>
+  <script src="./Dados/Alto_Japura_Demarcacao.js"></script>
+  <script src="./Dados/Aldeias_Kokama_rt1.js"></script>
+  <script src="./Dados/Aldeias_Tikuna.js"></script>
+  <script src="./Dados/A_Witoto_Amatura.js"></script>
+  <script src="./Dados/A_Tikuna_Amatura.js"></script>
+  <script src="./Dados/A_Kokama_Amatura.js"></script>
+  <script src="./Dados/A_Kambeba_Amatura.js"></script>
+  <script src="./Dados/A_Kaixanha_Tonantins.js"></script>
+  <script src="./Dados/A_Kaixanha_Kokama_Tonantins.js"></script>
+  <script src="./Dados/Unidades_Conservacao_Amazonas.js"></script>
+  <script src="./Dados/Colombia_pais.js"></script>
+  <script src="./Dados/TI_Japura.js"></script>
+  <script src="./Dados/Garimpo_AltoSolimoes.js"></script>
+  <script src="./Dados/Resguardos_Colombia2.js"></script>
+  <script src="./Dados/Solicitudes_Resguardo_Colombia.js"></script>
+  <script src="./Dados/Parques_Colombia.js"></script>
+  <script src="./Dados/TI_Amazonas.js"></script>
+  <script src="./Dados/Incra.js"></script>
+  <script src="./Dados/Medio_Solimoes.js"></script>
+  <script src="./Dados/Piaci_confirmado.js"></script>
+  <script src="./Dados/Piaci_noconfirmado.js"></script>
+
+</head>
+
+<body>
+  <aside class="sidebar">
+    <h2>Geovisor Alto Solimões (Em elaboração)</h2>
+
+    <div class="sidebar-legend">
+
+      <h3 class="titulo-restricao">Limites Administrativos</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Municipios-Altosolimoes2026">
+          <input type="checkbox" id="chk-Municipios-Altosolimoes2026">
+          <span class="legend-box Municipios_Altosolimoes2026"></span>
+          <span class="layer-text">Municípios Alto Solimões</span>
+        </label>
+      </div>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Medio-Solimoes">
+          <input type="checkbox" id="chk-Medio-Solimoes">
+          <span class="legend-box Medio_Solimoes"></span>
+          <span class="layer-text">Municípios Médio Solimões</span>
+        </label>
+      </div>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Municipios-Japura2026">
+          <input type="checkbox" id="chk-Municipios-Japura2026">
+          <span class="legend-box Municipios_Japura2026"></span>
+          <span class="layer-text">Municípios Japurá</span>
+        </label>
+      </div>
+
+
+      <h3 class="titulo-restricao">Terras Indígenas em Demarcação - Projeto RT1</h3>
+
+
+<div class="layer-item">
+
+  <label class="layer-label" for="chk-Terras-Indigenas-Kokama-Demarcacao">
+    <input type="checkbox" id="chk-Terras-Indigenas-Kokama-Demarcacao">
+    <span class="legend-box TerrasIndigenasKokamaDemarcacao"></span>
+    <span class="layer-text">Terras Indígenas Kokama em Demarcação</span>
+  </label>
+
+    <label class="layer-label" for="chk-Aldeias-Kokama-Layer">
+    <input type="checkbox" id="chk-Aldeias-Kokama-Layer">
+    <span class="legend-box Aldeias_Kokama_rt1"></span>
+    <span class="layer-text">Aldeias Kokama</span>
+  </label>
+
+  <!-- Tabela de áreas das Terras Indígenas Kokama -->
+
+<details class="tabela-desplegable">
+  <summary>Territórios Kokama em Demarcação</summary>
+
+  <div class="conteudo-tabela">
+    <!-- PEGA AQUÍ TU TABLA COMPLETA -->
+     <!-- Tabela de Terras Indígenas Kokama -->
+ <div class="diagnostico-kokama">
+<table class="tabela-terras-kokama">
+  <thead>
+    <tr>
+      <th>Territórios em Demarcação</th>
+      <th>Área (ha)</th>
+      <th>Aldeias</th>
+      <th>População</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Terra Indígena Kokama do Baixo Içá</td>
+      <td>111.152,43</td>
+      <td>9</td>
+      <td>580</td>
+    </tr>
+
+    <tr>
+      <td>Terra Indígena Kokama Wikakanaka</td>
+      <td>112.083,14</td>
+      <td>20</td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td>Terra Indígena Kokama Uyarika – Médio Içá</td>
+      <td>212.301,39</td>
+      <td>15</td>
+      <td>455</td>
+    </tr>
+
+    <tr class="tabela-total">
+      <td>Total</td>
+      <td>435.536,95</td>
+      <td>44</td>
+      <td>1.035</td>
+    </tr>
+  </tbody>
+</table>
+    <table class="tabela-terras-kokama">
+      <!-- Mantén tu thead y tbody actuales -->
+    </table>
+  </div>
+</details>
+</div>
+
+<details class="tabela-desplegable">
+  <summary>Saúde e Saneamento</summary>
+
+  <div class="conteudo-tabela">
+    <!-- PEGA AQUÍ TU TABLA COMPLETA -->
+
+    <div class="diagnostico-kokama">
+
+  <div class="diagnostico-grupo">VÁRZEA</div>
+
+  <table class="tabela-diagnostico">
+    <thead>
+      <tr>
+        <th>Aldeia (Pop.)</th>
+        <th>Água</th>
+        <th>Saneam.</th>
+        <th>Saúde</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>São Francisco II (51)</td>
+        <td>Chuva/Rio</td>
+        <td class="sem-servico">Nenhum</td>
+        <td class="sem-servico">Nenhuma</td>
+      </tr>
+      <tr>
+        <td>União da Boa Fé (34)</td>
+        <td>Chuva/Rio</td>
+        <td class="sem-servico">Nenhum</td>
+        <td class="sem-servico">Nenhuma</td>
+      </tr>
+      <tr>
+        <td>Bom Viver (57)</td>
+        <td>Chuva/Igarapé</td>
+        <td class="sem-servico">Nenhum</td>
+        <td class="sem-servico">Nenhuma</td>
+      </tr>
+      <tr>
+        <td>Manacapuru (16)</td>
+        <td>Várzea</td>
+        <td class="sem-servico">Nenhum</td>
+        <td>Sesai (visitas)</td>
+      </tr>
+      <tr>
+        <td>Manacapuru II (25)</td>
+        <td>Várzea</td>
+        <td class="sem-servico">Nenhum</td>
+        <td>Sesai (Manacapuru)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="diagnostico-grupo terra-firme">
+    TERRA FIRME
+  </div>
+
+  <table class="tabela-diagnostico">
+    <thead>
+      <tr>
+        <th>Aldeia (Pop.)</th>
+        <th>Água</th>
+        <th>Saneam.</th>
+        <th>Saúde</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monte Fortaleza (18)</td>
+        <td>Não detalhada</td>
+        <td>Fossa simples</td>
+        <td class="sem-servico">Nenhuma</td>
+      </tr>
+      <tr>
+        <td>Cachoeirinha (66)</td>
+        <td>Igarapé/Chuva</td>
+        <td>Fossa</td>
+        <td>Sesai (espaçada)</td>
+      </tr>
+      <tr>
+        <td>São Cristóvão (86)</td>
+        <td>Não detalhada</td>
+        <td>Fossa</td>
+        <td>Sesai/Município</td>
+      </tr>
+      <tr>
+        <td>Monte Tabor (227)</td>
+        <td>Igarapé/Poço</td>
+        <td>Algumas casas</td>
+        <td>Município/Sesai</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <table class="tabela-terras-kokama">
+      <!-- Mantén tu thead y tbody actuales -->
+    </table>
+  </div>
+</details>
+
+      <h3 class="titulo-restricao">Áreas Propostas para Demarcação em Amaturá e Tonantins - Projeto RT2</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Amatura-Tonantins-Areas-Propostas">
+          <input type="checkbox" id="chk-Amatura-Tonantins-Areas-Propostas">
+          <span class="legend-box Amatura_Tonantins_Areas_Propostas"></span>
+          <span class="layer-text">Áreas Propuestas para Demarcação - Projeto RT2</span>
+        </label>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Witoto-Amatura">
+          <input type="checkbox" id="chk-Witoto-Amatura">
+          <span class="legend-box Witoto_Amatura"></span>
+          <span class="layer-text">Aldeias Witoto</span>
+        </label>
+
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Tikuna-Amatura">
+          <input type="checkbox" id="chk-Tikuna-Amatura">
+          <span class="legend-box Tikuna_Amatura"></span>
+          <span class="layer-text">Aldeias Tikuna</span>
+        </label>
+
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Kambeba-Amatura">
+          <input type="checkbox" id="chk-Kambeba-Amatura">
+          <span class="legend-box Kambeba_Amatura"></span>
+          <span class="layer-text">Aldeias Kambeba</span>
+        </label>
+
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Kokama-Amatura">
+          <input type="checkbox" id="chk-Kokama-Amatura">
+          <span class="legend-box Kokama_Amatura"></span>
+          <span class="layer-text">Aldeias Kokama</span>
+        </label>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Kaixana-Tonantins">
+          <input type="checkbox" id="chk-Kaixana-Tonantins">
+          <span class="legend-box Kaixana_Tonantins"></span>
+          <span class="layer-text">Aldeias Kaixana</span>
+        </label>
+
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Kaixana-Kokama">
+          <input type="checkbox" id="chk-Kaixana-Kokama">
+          <span class="legend-box Kaixanha_Kokama"></span>
+          <span class="layer-text">Aldeias Kaixana e Kokama</span>
+        </label>
+
+<details class="tabela-desplegable">
+  <summary>Territórios em Amaturá e Tonantins</summary>
+
+  <div class="conteudo-tabela">
+    <!-- PEGA AQUÍ TU TABLA COMPLETA -->
+
+<!-- Tabela de Terras Indígenas Kokama -->
+<table class="tabela-terras-kokama">
+  <thead>
+    <tr>
+      <th>Territórios</th>
+      <th>Área (ha)</th>
+      <th>Aldeias</th>
+      <th>No de Familias</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Área Proposta Amaturá</td>
+      <td>159.861,72</td>
+      <td>9</td>
+      <td>54</td>
+    </tr>
+
+    <tr>
+      <td>Área Proposta Tonantins</td>
+      <td>52.424,29</td>
+      <td>8</td>
+      <td>300</td>
+    </tr>
+
+    <tr class="tabela-total">
+      <td>Total</td>
+      <td>212.286,01</td>
+      <td>17</td>
+      <td>354</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    <table class="tabela-terras-kokama">
+      <!-- Mantén tu thead y tbody actuales -->
+    </table>
+  </div>
+</details>
+
+
+<!-- ================================
+     COMPOSIÇÃO ÉTNICA
+================================ -->
+
+<details class="tabela-desplegable">
+
+  <summary>Composição Étnica</summary>
+
+  <div class="conteudo-tabela">
+
+    <!-- ÁREA PROPOSTA AMATURÁ -->
+
+    <div class="diagnostico-grupo">
+      Área Proposta – Amaturá
+    </div>
+
+    <table class="tabela-etnias">
+      <thead>
+        <tr>
+          <th>Etnia</th>
+          <th>Nº de famílias</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Witoto</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <td>Kokama</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>Kambeba</td>
+          <td>4</td>
+        </tr>
+        <tr class="tabela-total">
+          <td>Total</td>
+          <td>54</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ÁREA PROPOSTA TONANTINS -->
+
+    <div class="diagnostico-grupo terra-firme">
+      Área Proposta – Tonantins
+    </div>
+
+    <table class="tabela-etnias">
+      <thead>
+        <tr>
+          <th>Etnia</th>
+          <th>Nº de famílias</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Kaixana e Kokama</td>
+          <td>300</td>
+        </tr>
+        <tr class="tabela-total">
+          <td>Total</td>
+          <td>300</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</details>
+
+
+      <h3 class="titulo-restricao">Áreas Propostas para Demarcação Alto rio Japurá - Projeto RT3</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Alto-Japura-Demarcacao">
+          <input type="checkbox" id="chk-Alto-Japura-Demarcacao">
+          <span class="legend-box Amatura_Tonantins_Areas_Propostas"></span>
+          <span class="layer-text">Áreas Propuestas para Demarcação - Projeto RT3</span>
+        </label>
+      </div>
+
+            <h3 class="titulo-restricao">Terras Indígenas com Atuação da ACT-Brasil na Região do Japurá</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-TI-Japura">
+          <input type="checkbox" id="chk-TI-Japura">
+          <span class="legend-box TI_Japura"></span>
+          <span class="layer-text">Terras Indígenas: Paraná do Boá-Boá, Uneiuxi e Cuiu-Cuiu</span>
+        </label>
+      </div>
+
+      <h3 class="titulo-restricao">Terras Indígenas Tikuna</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Terras-Indigenas-Tikuna">
+          <input type="checkbox" id="chk-Terras-Indigenas-Tikuna">
+          <span class="legend-box TerrasIndigenasTikuna"></span>
+          <span class="layer-text">Terras Indígenas Tikuna com atuação da ACT - Brasil</span>
+        </label>
+      </div>
+
+        <div class="layer-item">
+        <label class="layer-label" for="chk-Aldeias_Tikuna">
+          <input type="checkbox" id="chk-Aldeias_Tikuna">
+          <span class="legend-box Aldeias_Tikuna"></span>
+          <span class="layer-text">Aldeias Tikunas TI Betânia e TI Matintin</span>
+        </label>
+      </div>
+
+
+      <h3 class="titulo-restricao">Contexto Territorial Brasil</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-TI-Amazonas">
+          <input type="checkbox" id="chk-TI-Amazonas">
+          <span class="legend-box TI_Amazonas"></span>
+          <span class="layer-text">Terras Indígenas - Brasil</span>
+        </label>
+      </div>
+
+            <div class="layer-item">
+        <label class="layer-label" for="chk-Piaci-confirmado">
+          <input type="checkbox" id="chk-Piaci-confirmado">
+          <span class="legend-box Piaci_confirmado"></span>
+          <span class="layer-text">Presença confirmada de Povos Indígenas Isolados</span>
+        </label>
+      </div>
+
+
+            <div class="layer-item">
+        <label class="layer-label" for="chk-Piaci-noconfirmado">
+          <input type="checkbox" id="chk-Piaci-noconfirmado">
+          <span class="legend-box Piaci_noconfirmado"></span>
+          <span class="layer-text">Presença não confirmada de Povos Indígenas Isolados</span>
+        </label>
+      </div>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Unidades-Conservacao-Amazonas">
+          <input type="checkbox" id="chk-Unidades-Conservacao-Amazonas">
+          <span class="legend-box Unidades_Conservacao_Amazonas"></span>
+          <span class="layer-text">Unidades de Conservação Amazonas - Brasil</span>
+        </label>
+      </div>
+
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Incra">
+          <input type="checkbox" id="chk-Incra">
+          <span class="legend-box Incra"></span>
+          <span class="layer-text">Assentamento Rural (INCRA) - Brasil</span>
+        </label>
+      </div>
+
+
+      <h3 class="titulo-restricao">Ameaças e Problemáticas Territoriais</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Garimpo_AltoSolimoes">
+          <input type="checkbox" id="chk-Garimpo_AltoSolimoes">
+          <span class="legend-box Garimpo_AltoSolimoes"></span>
+          <span class="layer-text">Registro de Garimpo: Rio Puruê, Rio Juami, Rio Puretê</span>
+        </label>
+      </div>
+
+
+      <h3 class="titulo-restricao">Contexto Territorial Colômbia</h3>
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Resguardo-Colombia">
+          <input type="checkbox" id="chk-Resguardo-Colombia">
+          <span class="legend-box Resguardo-Colombia"></span>
+          <span class="layer-text">Resguardos Indígenas Colômbia</span>
+        </label>
+      </div>
+
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Solicitudes-Colombia">
+          <input type="checkbox" id="chk-Solicitudes-Colombia">
+          <span class="legend-box Solicitudes_Resguardo_Colombia"></span>
+          <span class="layer-text">Solicitudes de criação de Resguardos</span>
+        </label>
+      </div>
+
+
+      <div class="layer-item">
+        <label class="layer-label" for="chk-Parques-Colombia">
+          <input type="checkbox" id="chk-Parques-Colombia">
+          <span class="legend-box Parques_Colombia"></span>
+          <span class="layer-text">Parques Nacionales Colômbia</span>
+        </label>
+      </div>
+
+<hr class="linha-logos">
+
+<div class="logos">
+  <img src="imagens/logo2.png" alt="Logo 2">
+</div>
+  </aside>
+
+  <main id="mapa_geportal" aria-label="Mapa"></main>
+
+  <script>
+const bounds = [
+  [-12, -78],
+  [5, -54]
+];
+
+const map = L.map("mapa_geportal", {
+  zoomSnap: 0.01,
+  zoomDelta: 0.01,
+  minZoom: 7,            // Zoom out máximo
+  maxZoom: 18,             // Zoom in máximo
+  maxBounds: bounds,
+  maxBoundsViscosity: 1.0
+}).setView(
+  [-4.49265655517262, -70.55550107759169],
+  7.5
+);
+
+    L.tileLayer("https://tile.openstreetmap.bzh/ca/{z}/{x}/{y}.png", {
+      minZoom: 7,
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    function v(val) {
+      if (val === null || val === undefined || val === "" || val === " ") return "-";
+      return val;
+    }
+
+    function v(val) {
+      if (
+        val === null ||
+        val === undefined ||
+        (typeof val === "string" && val.trim() === "")
+      ) {
+        return "-";
+      }
+      return val;
+    }
+
+// =======================
+// ORDEM DAS CAMADAS
+// =======================
+
+// =======================
+// ORDEM DAS CAMADAS
+// =======================
+
+// Municípios Alto Solimões e Japurá
+map.createPane("paneamazonas");
+map.getPane("paneamazonas").style.zIndex = 400;
+
+// Limite do Amazonas
+map.createPane("paneLimiteAmazonas");
+map.getPane("paneLimiteAmazonas").style.zIndex = 410;
+
+// Terras Indígenas e Áreas Propostas
+map.createPane("paneTerrasKokama");
+map.getPane("paneTerrasKokama").style.zIndex = 420;
+
+// Garimpo Alto Solimões - acima das camadas territoriais
+map.createPane("paneGarimpo");
+map.getPane("paneGarimpo").style.zIndex = 650;
+
+// Aldeias - acima dos polígonos e do garimpo
+map.createPane("paneComunidadesKokama");
+map.getPane("paneComunidadesKokama").style.zIndex = 700;
+
+// Popups acima de todas as camadas
+map.getPane("popupPane").style.zIndex = 750;
+
+
+    const AmazonasLayer = L.geoJSON(Estado_Amazonas, {
+      pane: "paneLimiteAmazonas",
+      style: function () {
+        return {
+          color: "#000000",
+          weight: 3,
+          fillOpacity: 0
+        };
+      },
+      interactive: false
+    }).addTo(map);
+
+
+    const ColombiaLayer = L.geoJSON(Colombia_pais, {
+      pane: "paneLimiteAmazonas",
+      style: function () {
+        return {
+          color: "#000000",
+          weight: 2.5,
+          fillOpacity: 0
+        };
+      },
+      interactive: false
+    }).addTo(map);
+
+
+    const Municipios_Altosolimoes_Layer = L.geoJSON(Municipios_Altosolimoes2026, {
+      pane: "paneamazonas",
+      style: function () {
+        return {
+      color: "#8B904B",
+      weight: 1.5,
+      opacity: 0.5,
+      fillColor: "#8B904B",
+      fillOpacity: 0.4
+        };
+      },
+      interactive: true,
+      onEachFeature: function (feature, layer) {
+        const p = feature.properties || {};
+
+        layer.bindPopup(`
+          <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;"> ${v(p.NM_MUN)}<br>
+          </div>
+        `);
+      }
+    });
+
+
+
+    const Medio_Solimoes_Layer = L.geoJSON(Medio_Solimoes, {
+      pane: "paneamazonas",
+      style: function () {
+        return {
+      color: "#8B904B",
+      weight: 1.5,
+      opacity: 0.5,
+      fillColor: "#8B904B",
+      fillOpacity: 0.4
+        };
+      },
+      interactive: true,
+      onEachFeature: function (feature, layer) {
+        const p = feature.properties || {};
+
+        layer.bindPopup(`
+          <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;"> ${v(p.NM_MUN)}<br>
+          </div>
+        `);
+      }
+    });
+
+
+     const Municipios_Japura_Layer = L.geoJSON(Municipios_Japura2026, {
+      pane: "paneamazonas",
+      style: function () {
+        return {
+      color: "#8B904B",
+      weight: 1.5,
+      opacity: 0.5,
+      fillColor: "#8B904B",
+      fillOpacity: 0.4
+        };
+      },
+      interactive: true,
+      onEachFeature: function (feature, layer) {
+        const p = feature.properties || {};
+
+        layer.bindPopup(`
+          <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;"> ${v(p.NM_MUN)}<br>
+          </div>
+        `);
+      }
+    });
+
+
+
+const TerrasIndigenasKokamaDemarcacao_Layer = L.geoJSON(TerrasIndigenasKokamaDemarcacao, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#5A3A00",
+      weight: 1.5,
+      fillColor: "#B8860B",
+      fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeTerraI)}
+      </div>
+      <b>Área (Ha):</b> ${v(p.Area)}<br>
+      <b>População:</b> ${v(p.Populacao)}<br>
+      <b>Aldeias:</b> ${v(p.Aldeias)}<br>
+      <b>Fase Jurídica:</b> ${v(p.FaseJuridi)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+      <b>Estado:</b> ${v(p.Estado)}<br>
+    `);
+  }
+});
+
+
+// ✅ Aldeias KOKAMA
+const Comunidades_Kokama_RT1_ICON = L.icon({
+  iconUrl: "imagens/comunidades_kokama.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Comunidades_Kokama_RT1_Layer = L.geoJSON(Aldeias_Kokama_rt1, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Comunidades_Kokama_RT1_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.Nome_Aldei)}
+      </div>
+
+      <b>Terra Indígena:</b> ${v(p.TerraIndig)}<br>
+      <b>Número de Pessoas:</b> ${v(p.Populacao)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+
+const TerrasIndigenasTikuna_Layer = L.geoJSON(TerrasIndigenasTikuna, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#5A3A00",
+      weight: 1.5,
+      fillColor: "#C45D4C",
+      fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeTerral)}
+      </div>
+      <b>Área (Ha):</b> ${v(p.Area_Ha)}<br>
+      <b>População:</b> ${v(p.Populacao)}<br>
+      <b>Aldeias:</b> ${v(p.Aldeias)}<br>
+      <b>Fase Jurídica:</b> ${v(p.FaseJuridi)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+      <b>Estado:</b> ${v(p.Estado)}<br>
+    `);
+  }
+});
+
+
+// ✅ Aldeias TIKUNA BETANIA
+const Aldeias_Tikuna_ICON = L.icon({
+  iconUrl: "imagens/comunidades_Tikuna.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Aldeias_Tikuna_Layer = L.geoJSON(Aldeias_Tikuna, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Aldeias_Tikuna_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeAldeia)}
+      </div>
+
+      <b>Terra Indígena:</b> ${v(p.TerraIndig)}<br>
+      <b>Número de Pessoas:</b> ${v(p.Populacao)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+const Amatura_Tonantins_Areas_Propostas_Layer = L.geoJSON(Amatura_Tonantins_Areas_Propostas, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#183f36",
+      weight: 1.5,
+      fillColor: "#348C78",
+      fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.Nome)}
+      </div>
+      <b>Área (Ha):</b> ${v(p.Area_Ha)}<br>
+      <b>Fase Jurídica:</b> ${v(p.Finalidade)}<br>
+      <b>Aldeias:</b> ${v(p.Aldeias)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+      <b>Estado:</b> ${v(p.Estado)}<br>
+    `);
+  }
+});
+
+
+// ✅ Aldeias Witoto Amaturá
+const Comunidades_Witoto_ICON = L.icon({
+  iconUrl: "imagens/witoto.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Witoto_Amatura_Layer = L.geoJSON(Witoto_Amatura, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Comunidades_Witoto_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeAldeia)}
+      </div>
+
+      <b>Etnia:</b> ${v(p.Etnia)}<br>
+      <b>Finalidade:</b> ${v(p.Finalidade)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+// ✅ Aldeias Tikuna Amaturá
+const Aldeias_Tikuna_Amatura_ICON = L.icon({
+  iconUrl: "imagens/comunidades_tikuna.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Tikuna_Amatura_Layer = L.geoJSON(Tikuna_Amatura, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Aldeias_Tikuna_Amatura_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeAldeia)}
+      </div>
+
+      <b>Etnia:</b> ${v(p.Etnia)}<br>
+      <b>Finalidade:</b> ${v(p.Finalidade)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+// ✅ Aldeias Kambeba Amaturá
+const Aldeias_Kambeba_Amatura_ICON = L.icon({
+  iconUrl: "imagens/Kambeba.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Kambeba_Amatura_Layer = L.geoJSON(Kambeba_Amatura, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Aldeias_Kambeba_Amatura_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeAldeia)}
+      </div>
+
+      <b>Etnia:</b> ${v(p.Etnia)}<br>
+      <b>Finalidade:</b> ${v(p.Finalidade)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+// ✅ Aldeias Kokama Amaturá
+const Aldeias_Kokama_Amatura_ICON = L.icon({
+  iconUrl: "imagens/comunidades_kokama.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Kokama_Amatura_Layer = L.geoJSON(Kokama_Amatura, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Aldeias_Kokama_Amatura_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeAldeia)}
+      </div>
+
+      <b>Etnia:</b> ${v(p.Etnia)}<br>
+      <b>Finalidade:</b> ${v(p.Finalidade)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+// ✅ Aldeias Kaixana Tonantins
+const Aldeias_Kaixana_Tonantins_ICON = L.icon({
+  iconUrl: "imagens/Kaixana.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Kaixana_Tonantins_Layer = L.geoJSON(Kaixanha_Tonantins, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Aldeias_Kaixana_Tonantins_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeAldeia)}
+      </div>
+
+      <b>Etnia:</b> ${v(p.Etnia)}<br>
+      <b>Finalidade:</b> ${v(p.Finalidade)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+// ✅ Aldeias Kaixana e Kokama Tonantins
+const Aldeias_Kaixana_Kokama_Tonantins_ICON = L.icon({
+  iconUrl: "imagens/Kokama_Kaixana.png",
+  iconSize: [16, 16],
+  iconAnchor: [7, 7],
+  popupAnchor: [0, -7]
+});
+
+const Kaixana_Kokama_Tonantins_Layer = L.geoJSON(Kaixanha_Kokama, {
+
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: Aldeias_Kaixana_Kokama_Tonantins_ICON,
+      pane: "paneComunidadesKokama"
+    });
+  },
+
+  onEachFeature: function(feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NomeAldeia)}
+      </div>
+
+      <b>Etnia:</b> ${v(p.Etnia)}<br>
+      <b>Finalidade:</b> ${v(p.Finalidade)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+    `);
+  }
+
+});
+
+
+// ✅ Alto Japura
+const Alto_Japura_Demarcacao_Layer = L.geoJSON(Alto_Japura_Demarcacao, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#183f36",
+      weight: 1.5,
+      fillColor: "#348C78",
+      fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.Nome)}
+      </div>
+      <b>Área (Ha):</b> ${v(p.Area_Ha)}<br>
+      <b>Município:</b> ${v(p.Municipio)}<br>
+      <b>Estado:</b> ${v(p.Estado)}<br>
+    `);
+  }
+});
+
+
+
+// ✅ Terras Indígenas Japura
+const TI_Japura_Layer = L.geoJSON(TI_Japura, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#5A3A00",
+      weight: 1.5,
+      fillColor: "#C45D4C",
+      fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.terrai_nom)}
+      </div>
+    `);
+  }
+});
+
+
+// ✅ Unidades de Conservação Brasil
+const UnidadesConservacaoAmazonas_Layer = L.geoJSON(Unidades_Conservacao_Amazonas, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#78B96A",
+      weight: 1.5,
+      fillColor: "#78B96A",
+      fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NOME_UC1)}
+      </div>
+      <b>Categoria:</b> ${v(p.CATEGORI3)}<br>
+    `);
+  }
+});
+
+
+// ✅ INCRA Brasil
+const Incra_Layer = L.geoJSON(Incra, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#7446B8",
+      weight: 1.5,
+      fillColor: "#7446B8",
+      fillOpacity: 0.65
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.AUC_NM)}
+      </div>
+    `);
+  }
+});
+
+
+// ✅ Garimpo Alto Solimoes
+const Garimpo_AltoSolimoes_Layer = L.geoJSON(Garimpo_AltoSolimoes, {
+  pane: "paneGarimpo",
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#D62828",
+      weight: 2,
+      fillColor: "#D62828",
+      fillOpacity: 0.5
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NOME_UC1)}
+      </div>
+      <b>Categoria:</b> ${v(p.CATEGORI3)}<br>
+    `);
+  }
+});
+
+
+// ✅ Terras Indígenas Brasil
+const TI_Amazonas_Layer = L.geoJSON(TI_Amazonas, {
+  pane: "paneGarimpo",
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+        color: "#A67C52",
+        weight: 1.5,
+        fillColor: "#E6D5C3",
+        fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.terrai_nom)}
+      </div>
+    `);
+  }
+});
+
+// ✅ PIACI
+const Piaci_confirmado_Layer = L.geoJSON(Piaci_confirmado, {
+  pane: "paneGarimpo",
+  pane: "paneTerrasKokama",
+  style: function () {
+        return {
+          color: "#66CDAB",
+          weight: 1.5,
+          fillColor: "#66CDAB",
+          fillOpacity: 0.7
+        };
+      },
+      interactive: false
+    });
+
+
+const Piaci_noconfirmado_Layer = L.geoJSON(Piaci_noconfirmado, {
+  pane: "paneGarimpo",
+  pane: "paneTerrasKokama",
+  style: function () {
+        return {
+          color: "#969696",
+          weight: 1.5,
+          fillColor: "#969696",
+          fillOpacity: 0.7
+        };
+      },
+      interactive: false
+    });
+
+
+
+// ✅ Resguardos Indígenas Colombia
+const Resguardo_Colombia_Layer = L.geoJSON(Resguardos_Colombia2, {
+  pane: "paneGarimpo",
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+        color: "#A67C52",
+        weight: 1.5,
+        fillColor: "#E6D5C3",
+        fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NOMBRE)}
+      </div>
+    `);
+  }
+});
+
+
+// ✅ Solicitudes Resguardos Indígenas Colombia
+   const SolicitudesResguardosColombiaLayer = L.geoJSON(Solicitudes_Resguardo_Colombia, {
+   pane: "paneGarimpo",
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+        color: "#9A5718",
+        weight: 1.5,
+        fillColor: "#D98A32",
+        fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.NOMBRE)}
+      </div>
+    `);
+  }
+});
+
+
+// ✅ Parques Colombia
+const Parques_Colombia_Layer = L.geoJSON(Parques_Colombia, {
+  pane: "paneTerrasKokama",
+  style: function () {
+    return {
+      color: "#78B96A",
+      weight: 1.5,
+      fillColor: "#78B96A",
+      fillOpacity: 0.7
+    };
+  },
+  interactive: true,
+  onEachFeature: function (feature, layer) {
+    const p = feature.properties || {};
+
+    layer.bindPopup(`
+      <div style="text-align:center; font-size:14px; font-weight:bold; color:#000; margin-bottom:10px;">
+        ${v(p.nombre)}
+      </div>
+      <b>Categoria:</b> ${v(p.categoria)}<br>
+    `);
+  }
+});
+
+    // =======================
+    // CONTROLE DAS CAMADAS
+    // Todas começam desligadas
+    // =======================
+const controlesCamadas = [
+  ["chk-Municipios-Altosolimoes2026", Municipios_Altosolimoes_Layer],
+  ["chk-Municipios-Japura2026", Municipios_Japura_Layer],
+  ["chk-Terras-Indigenas-Kokama-Demarcacao", TerrasIndigenasKokamaDemarcacao_Layer],
+  ["chk-Terras-Indigenas-Tikuna", TerrasIndigenasTikuna_Layer],
+  ["chk-Amatura-Tonantins-Areas-Propostas", Amatura_Tonantins_Areas_Propostas_Layer],
+  ["chk-Alto-Japura-Demarcacao", Alto_Japura_Demarcacao_Layer],
+  ["chk-Aldeias-Kokama-Layer", Comunidades_Kokama_RT1_Layer],
+  ["chk-Aldeias_Tikuna", Aldeias_Tikuna_Layer],
+  ["chk-Witoto-Amatura", Witoto_Amatura_Layer],
+  ["chk-Tikuna-Amatura", Tikuna_Amatura_Layer],
+  ["chk-Kambeba-Amatura", Kambeba_Amatura_Layer],
+  ["chk-Kokama-Amatura", Kokama_Amatura_Layer],
+  ["chk-Kaixana-Tonantins", Kaixana_Tonantins_Layer],
+  ["chk-Kaixana-Kokama", Kaixana_Kokama_Tonantins_Layer],
+  ["chk-Unidades-Conservacao-Amazonas", UnidadesConservacaoAmazonas_Layer],
+  ["chk-TI-Japura", TI_Japura_Layer],
+  ["chk-Garimpo_AltoSolimoes", Garimpo_AltoSolimoes_Layer],
+  ["chk-Resguardo-Colombia", Resguardo_Colombia_Layer],
+  ["chk-Solicitudes-Colombia", SolicitudesResguardosColombiaLayer],
+  ["chk-Parques-Colombia", Parques_Colombia_Layer],
+  ["chk-TI-Amazonas", TI_Amazonas_Layer],
+  ["chk-Incra", Incra_Layer],
+  ["chk-Medio-Solimoes", Medio_Solimoes_Layer],
+  ["chk-Piaci-confirmado", Piaci_confirmado_Layer],
+  ["chk-Piaci-noconfirmado", Piaci_noconfirmado_Layer],
+  
+];
+
+
+controlesCamadas.forEach(([idCheckbox, camada]) => {
+
+  const checkbox = document.getElementById(idCheckbox);
+
+  if (!checkbox) return;
+
+  checkbox.checked = false;
+
+  checkbox.addEventListener("change", function() {
+
+    if (this.checked) {
+      camada.addTo(map);
+    } else {
+      map.removeLayer(camada);
+    }
+
+  });
+
+});
+
+  
+  </script>
+  <script src="./Dados/assistente_tabela.js"></script>
+</body>
+</html>
